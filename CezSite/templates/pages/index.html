@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{%load static i18n%}
+{% block content %}
+<!-- for index header put additional class "header-index" -->
+<div class="background background-index">
+    {% for banner in banners %}
+	<div class="index-wrapper">
+		<div class="main-head-index">
+			<div class="main-head-title">
+				<h1 class="title">{{banner.title}}</h1>
+			</div>
+		</div>
+	</div>
+    <!-- <img src="{{banner.image.url}}" alt="" width="1920" height="1146" /> -->
+	<img src="{% get_static_prefix %}images/large/CEZ_main_head_2_1920x1146_pad_478b24840a.png" alt="" width="1920" height="1146" />
+   {% endfor %} 
+</div>
+<div class="main">
+	<div class="index-wrapper">
+		<div class="accents accents-index">
+			<div class="accents-head">
+				<h2 class="accents-title">ИНФОРМАЦИОНЕН УЕБ САЙТ НА ЧЕЗ ОТНОСНО ОБРАБОТКАТА НА ЛИЧНИ ДАННИ</h2>
+            </div>
+			<div class="boxes boxes-accents">
+                {% for accent in accents %}
+                    <div class="box box-accents">
+                        <svg aria-hidden="true" class="icon icon-svg">
+                            <use xlink:href="{% get_static_prefix %}images/svg-sprite.svg#{{accent.icon}}"></use>
+                        </svg>
+                        <div class="textcontent">
+                            <h4>{{accent.title}}</h4>
+
+                            <p>{{accent.discription}}</p>
+                            <a>прочети още
+                                <svg aria-hidden="true" class="icon icon-svg">
+                                    <use xlink:href="{% get_static_prefix %}images/svg-sprite.svg#arrow-icon"></use>
+                                </svg>
+                            </a>
+                        </div>
+                
+                    </div>
+                {% endfor %}
+            </div>
+		</div>
+		<div class="accents accents-news">
+			<div class="accents-head">
+				<h2 class="accents-title">ИНФОРМАЦИЯ ЗА "БИСКВИТКИ"</h2>
+				<p class="textcontent">Този уебсайт използва "бисквитки" единствено с цел да направи 
+							възможни или подобри определени негови функционалности, да улесни процеса на навигация 
+							за ползвателя и не използва „бисквитки“ за събиране, обработване, разпространение
+							или съхранение на лични данни.</p>
+			</div>
+			<button class="btn btn-primary btn-grad-animated">Виж повече
+				<svg aria-hidden="true" class="icon arrow-icon-svg">
+					<use xlink:href="{% get_static_prefix %}images/svg-sprite.svg#arrow-icon"></use>
+				</svg>
+			</button>
+		</div>
+	</div>
+</div>
+
+{%endblock%}

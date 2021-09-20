@@ -1,0 +1,27 @@
+{%load static i18n%}
+<header class="header">
+	<div class="index-wrapper">
+		<a href="index.html" class="logo">
+			<svg aria-hidden="true" class="logo-svg">
+				<use xlink:href="{% get_static_prefix %}images/svg-sprite.svg#nav-logo"></use>
+			</svg>
+			<span>CEZ GROUP</span>
+		</a>
+		<a href="javascript:;" class="btn btn-menu" id="js-menu-trigger" data-active-target="#js-menu-target"><span></span></a>
+		<nav class="nav-lang">
+			<ul class="nav-lang-body">
+				<li class="selected"><a href="#">БГ</a></li>
+				<li><a href="#">EN</a></li>
+			</ul>
+		</nav>
+
+
+		<a href="javascript:;" class="btn btn-search" id="js-search-button" >
+			<svg aria-hidden="true" class="icon icon-svg">
+				<use xlink:href="{% get_static_prefix %}images/svg-sprite.svg#search"></use>
+			</svg>
+		</a> 
+		{% include 'partials/_header-nav.html' %}
+		{% include 'partials/_search.html' %}
+	</div>
+</header>

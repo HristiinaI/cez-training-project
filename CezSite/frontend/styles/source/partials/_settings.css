@@ -1,0 +1,38 @@
+:root {
+	--path: ../images;
+
+	--clearfix: {
+		content: ''; 
+		display: block; 
+		clear: both; 
+	};
+
+	--wrapper-width: 1200px;
+	--index-wrapper-width: 1700px;
+
+	--font-sans-serif:       'Arial', 'Helvetica', sans-serif;
+	--font-serif:            'Times New Roman', Times, serif;
+	
+	--font-primary:          'Arial Bulgarian', sans-serif;
+	--font-secondary:        'PTSans', serif;
+	--font-size-primary:     14px;
+
+	--success:                  #8fc898;
+	--error:                    #e17979;
+	--info:                     #79b8e1;
+	--warning:                  #f9c445;
+
+	--color-primary:            #2a4057; /* dark-blue-teal */
+	--color-secondary:          #4b6e91 ; /* light-blue-teal */
+	--color-tertiary:           #f5f5f5; /* white-245 */
+	--color-link-hover:         #bebabc; /* gray */
+	--color-neutral-lt:         #ebebeb;
+	--color-neutral-dk:         #e1e1e1;
+
+	--color-titles:             #212530;
+	--color-text:               #212530;
+	--color-link:               var(--color-tertiary);
+
+
+	--main-nav-height:           75px; /* main-nav-height */
+}

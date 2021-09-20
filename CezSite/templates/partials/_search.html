@@ -1,0 +1,27 @@
+{%load static i18n%}
+<div class="form form-search" id="js-search-form" data-search-url="../../ajax/search.json">
+	<form action="#" method="POST" id="js-form-search" autocomplete="on" novalidate="">
+		<div class="cols">
+			<div class="col col12of12">
+				<div class="form-row">
+					<div class="form-controls">
+						<button type="submit" class="search-submit" id="search_submit">
+							<svg aria-hidden="true" class="icon search-icon-svg">
+								<use xlink:href="{% get_static_prefix %}images/svg-sprite.svg#search"></use>
+							</svg>
+						</button>
+						<div class="field field-text">
+							<input type="text" name="search" id="js-search-field" placeholder="Търсене...">
+						</div>
+						<ul class="js-search-results" id="js-search-results"></ul>
+						<div class="icon-close" id="js-search-close">
+							<svg aria-hidden="true" class="icon icon-svg">
+								<use xlink:href="{% get_static_prefix %}images/svg-sprite.svg#close-icon"></use>
+							</svg>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
