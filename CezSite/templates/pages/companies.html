@@ -1,3 +1,6 @@
+{% extends 'base.html' %}
+{%load static i18n%}
+{% block content %}
 <div class="main-head">
 	<div class="background">
 		<img src="../../images/large/about-us-1920x265.jpg" alt="" width="1920" height="256" />
@@ -20,124 +23,34 @@
 			<div class="b-companies">
 				<div class="b-companies-head">
 					<h2 class="companies-title">дружества</h2>
-					<h4 class="companies-description">Lorem Ipsum Dolor Sit Amet Pastet Mish Mash Paprikash Chesun Banica and Bob with Nadenica</h4>
+					<h4 class="companies-description">Компании на групата ЧЕЗ в България.
+					</h4>
 				</div>
 				<div class="boxes boxes-companies">
-
+					{% for company in companies %}
+					{% if company.is_active %}
 					<div class="box box-companies">
 						<a href="companies-details.html">
 							<svg aria-hidden="true" class="icon icon-svg">
-								<use xlink:href="../../images/svg-sprite.svg#box-companies-icon"></use>
+								<use xlink:href="{% get_static_prefix %}images/svg-sprite.svg#box-companies-icon"></use>
 							</svg>
 							<div class="textcontent">
-								<h4>ТЕСТОВ ТЕКСТ ЗА ЗАГЛАВИЕ НА КУТИЙКА</h4>
+								<h4>{{company.company_text}}</h4>
 
-								<p>Тестов текст за параграфче на кутийка в по-голяма кутийка, в още по-голяма кутийка, която е в много голяма кутийка, която е в кашонче, което е в камионче</p>
+								<p>{{company.description}}</p>
 								<span>към дружество
 									<svg aria-hidden="true" class="icon icon-svg">
-										<use xlink:href="../../images/svg-sprite.svg#arrow-icon"></use>
+										<use xlink:href="{% get_static_prefix %}images/svg-sprite.svg#arrow-icon"></use>
 									</svg>
 								</span>
 							</div>
 						</a>
 					</div>
-
-
-					<div class="box box-companies">
-						<a href="#">
-							<svg aria-hidden="true" class="icon icon-svg">
-								<use xlink:href="../../images/svg-sprite.svg#box-companies-icon"></use>
-							</svg>
-							<div class="textcontent">
-								<h4>ТЕСТОВ ТЕКСТ ЗА ЗАГЛАВИЕ НА КУТИЙКА</h4>
-
-								<p>Тестов текст за параграфче на кутийка в по-голяма кутийка, в още по-голяма кутийка, която е в много голяма кутийка, която е в кашонче, което е в камионче</p>
-								<span>към дружество
-									<svg aria-hidden="true" class="icon icon-svg">
-										<use xlink:href="../../images/svg-sprite.svg#arrow-icon"></use>
-									</svg>
-								</span>
-							</div>
-						</a>
-					</div>
-
-
-					<div class="box box-companies">
-						<a href="#">
-							<svg aria-hidden="true" class="icon icon-svg">
-								<use xlink:href="../../images/svg-sprite.svg#box-companies-icon"></use>
-							</svg>
-							<div class="textcontent">
-								<h4>ТЕСТОВ ТЕКСТ ЗА ЗАГЛАВИЕ НА КУТИЙКА</h4>
-
-								<p>Тестов текст за параграфче на кутийка в по-голяма кутийка, в още по-голяма кутийка, която е в много голяма кутийка, която е в кашонче, което е в камионче</p>
-								<span>към дружество
-									<svg aria-hidden="true" class="icon icon-svg">
-										<use xlink:href="../../images/svg-sprite.svg#arrow-icon"></use>
-									</svg>
-								</span>
-							</div>
-						</a>
-					</div>
-
-
-					<div class="box box-companies">
-						<a href="#">
-							<svg aria-hidden="true" class="icon icon-svg">
-								<use xlink:href="../../images/svg-sprite.svg#box-companies-icon"></use>
-							</svg>
-							<div class="textcontent">
-								<h4>ТЕСТОВ ТЕКСТ ЗА ЗАГЛАВИЕ НА КУТИЙКА</h4>
-
-								<p>Тестов текст за параграфче на кутийка в по-голяма кутийка, в още по-голяма кутийка, която е в много голяма кутийка, която е в кашонче, което е в камионче</p>
-								<span>към дружество
-									<svg aria-hidden="true" class="icon icon-svg">
-										<use xlink:href="../../images/svg-sprite.svg#arrow-icon"></use>
-									</svg>
-								</span>
-							</div>
-						</a>
-					</div>
-
-
-					<div class="box box-companies">
-						<a href="#">
-							<svg aria-hidden="true" class="icon icon-svg">
-								<use xlink:href="../../images/svg-sprite.svg#box-companies-icon"></use>
-							</svg>
-							<div class="textcontent">
-								<h4>ТЕСТОВ ТЕКСТ ЗА ЗАГЛАВИЕ НА КУТИЙКА</h4>
-
-								<p>Тестов текст за параграфче на кутийка в по-голяма кутийка, в още по-голяма кутийка, която е в много голяма кутийка, която е в кашонче, което е в камионче</p>
-								<span>към дружество
-									<svg aria-hidden="true" class="icon icon-svg">
-										<use xlink:href="../../images/svg-sprite.svg#arrow-icon"></use>
-									</svg>
-								</span>
-							</div>
-						</a>
-					</div>
-
-
-					<div class="box box-companies">
-						<a href="#">
-							<svg aria-hidden="true" class="icon icon-svg">
-								<use xlink:href="../../images/svg-sprite.svg#box-companies-icon"></use>
-							</svg>
-							<div class="textcontent">
-								<h4>ТЕСТОВ ТЕКСТ ЗА ЗАГЛАВИЕ НА КУТИЙКА</h4>
-
-								<p>Тестов текст за параграфче на кутийка в по-голяма кутийка, в още по-голяма кутийка, която е в много голяма кутийка, която е в кашонче, което е в камионче</p>
-								<span>към дружество
-									<svg aria-hidden="true" class="icon icon-svg">
-										<use xlink:href="../../images/svg-sprite.svg#arrow-icon"></use>
-									</svg>
-								</span>
-							</div>
-						</a>
-					</div>
+					{%endif%}
+					{%endfor%}
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
+{%endblock%}
