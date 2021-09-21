@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 from django.http import HttpResponse
 
-from .models import Companies
+from .models import Companies, Policy
 
 from django.template import loader
 from django.http import HttpResponse
@@ -20,3 +20,10 @@ def company(request):
          print(company.company_text)
 
    return render(request, 'pages/companies.html', context)
+
+def detail(request, question_id):
+   policies = Policy.objects.all()
+
+   context = {'policies' : policies}
+
+   return render(request, 'pages/companies-details.html', context)
