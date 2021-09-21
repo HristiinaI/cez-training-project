@@ -9,6 +9,7 @@ class Companies(models.Model):
     company_text = models.CharField(max_length=200)
     description = models.CharField(max_length=200)
     image = models.ImageField(upload_to='media', blank=True)
+    policies = models.OneToOneField('Policy', default=None, on_delete=models.CASCADE, blank=True, null=True)
     position = models.IntegerField()
     is_active = models.BooleanField(default=True)
     slug = models.SlugField(max_length=40, blank=True)
@@ -26,3 +27,4 @@ class Policy(models.Model):
 
     def __str__(self):   
         return self.policy_title
+
