@@ -50,27 +50,16 @@
 										<p class="text">Изтеглете приложените файлове от тук</p>
 									</div>
 									<ul class="sidebar-downloads">
+										{% for upload in policy.policy_uploads %}
+										<!-- uploads.title -->
 										<li class="sidebar-download" >
-											<a href="#" download>Име на документ
+											<a href="{% get_static_prefix %}uploads/{{upload.upload_name}}" download>{{upload.upload_name}}
 												<svg aria-hidden="true" class="icon icon-svg">
-													<use xlink:href="../../images/svg-sprite.svg#download-icon"></use>
+													<use xlink:href="{% get_static_prefix %}images/svg-sprite.svg#download-icon"></use>
 												</svg>
 											</a>
 										</li>
-										<li class="sidebar-download" >
-											<a href="#" download>Име на документ
-												<svg aria-hidden="true" class="icon icon-svg">
-													<use xlink:href="../../images/svg-sprite.svg#download-icon"></use>
-												</svg>
-											</a>
-										</li>
-										<li class="sidebar-download" >
-											<a href="#" download>Име на документ
-												<svg aria-hidden="true" class="icon icon-svg">
-													<use xlink:href="../../images/svg-sprite.svg#download-icon"></use>
-												</svg>
-											</a>
-										</li>
+										{% endfor %}
 									</ul>
 								</div>
 							</div>

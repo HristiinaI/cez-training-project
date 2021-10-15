@@ -7,6 +7,9 @@ from .models import Companies, Policy, PolicyUploads
 class PolicyStackedInline(admin.StackedInline):
     model = Policy
 
+class PolicyUploadsStackedInline(admin.StackedInline):
+    model = PolicyUploads
+
 class CompaniesAdmin(admin.ModelAdmin):
     model = Companies
     fields = ['company_text', 'description', 'image', 'position', 'is_active', 'slug']
@@ -18,10 +21,11 @@ class CompaniesAdmin(admin.ModelAdmin):
 
 class PolicyAdmin(admin.ModelAdmin):
     model = Policy
-    fields = ['company', 'policy_title','policy_richtext','uploads', 'is_active']
+    fields = ['company', 'policy_title','policy_richtext', 'is_active']
     list_display = ['policy_title', 'company']
     list_filter = ['company']
     search_fields =['policy_title']
+    inlines = [PolicyUploadsStackedInline]
 
 class PolicyUploadAdmin(admin.ModelAdmin):
     model = PolicyAdmin

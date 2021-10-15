@@ -30,7 +30,7 @@ class Policy(models.Model):
     policy_title = models.CharField(max_length=200)
     policy_richtext = RichTextField()
     # file will be uploaded to MEDIA_ROOT/uploads
-    uploads = models.ManyToManyField('PolicyUploads', related_name='uploads', default=None, blank=True, null=True)
+    # uploads = models.ManyToManyField('PolicyUploads', related_name='uploads', default=None, blank=True, null=True)
     is_active = models.BooleanField(default=True)
 
     def policy_uploads(self):

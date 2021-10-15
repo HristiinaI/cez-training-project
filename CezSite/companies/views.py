@@ -26,6 +26,10 @@ def detail(request, company_id):
    print(company_id, "compabyID:")
    
    for policy in company.policies():
-      print(policy.policy_title)
+      print("Policy title: " + policy.policy_title)
+      # print("Policy upload title: " + policy.uploads)
+      for uploads in policy.policy_uploads():
+         print("Uploads title" + uploads.upload_name)
+      
 
    return render(request, 'pages/companies-details.html', {'company' : company})
